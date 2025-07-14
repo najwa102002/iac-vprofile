@@ -10,7 +10,7 @@ on:
     branches:
       - main
     paths:
-      - terraform/**
+      - terraform/** #we trigger the workflow whener we have a changes in terraform/**
 
 #env variables are available globally in the workflows , secrets stay secure , we don't have to repeat them in every workflow
 env:

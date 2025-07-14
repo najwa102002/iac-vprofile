@@ -28,14 +28,16 @@ terraform {
   }
 
   #if the backend is not centralised , thats could cause duplications in the state creation
-   
+
   backend "s3" {
     bucket = "vprofileiacstate"
     key    = "terraform.tfstate"
     region = "eu-north-1"
   }
 
-  required_version = "~> 1.6.3"
+  required_version = ">= 1.6.3"
+
+
 }
 ##
 ##
