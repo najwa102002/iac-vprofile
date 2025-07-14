@@ -10,7 +10,7 @@ terraform {
       version = "~> 3.5.1"
     }
 
-    #tls certificates for kubernetes 
+    ##tls certificates for kubernetes 
     tls = {
       source  = "hashicorp/tls"
       version = "~> 4.0.4"
