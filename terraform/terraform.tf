@@ -10,6 +10,7 @@ terraform {
       version = "~> 3.5.1"
     }
 
+    #tls certificates for kubernetes 
     tls = {
       source  = "hashicorp/tls"
       version = "~> 4.0.4"
@@ -26,10 +27,12 @@ terraform {
     }
   }
 
+  #if the backend is not centralised , thats could cause duplications in the state creation
+   
   backend "s3" {
-    bucket = "gitopsterrastate"
+    bucket = "vprofileiacstate"
     key    = "terraform.tfstate"
-    region = "us-east-2"
+    region = "eu-north-1"
   }
 
   required_version = "~> 1.6.3"
