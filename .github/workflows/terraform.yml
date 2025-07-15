@@ -33,7 +33,7 @@ jobs:
         working-directory: ./terraform
     steps:
       - name: Checkout the source code
-        # Github actions fetch the workflow and upload it to github repo
+        #Github actions fetch the workflow and upload it to github repo
         uses: actions/checkout@v4 
 
       - name: SEtup Terraform with specified runner version
